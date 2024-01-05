@@ -3,21 +3,21 @@ import { writeFileSync } from "fs";
 import { Feed } from "feed";
 import { createContentLoader, type SiteConfig } from "vitepress";
 
-const hostname = "https://justin3go.com";
+const hostname = "https://en.justin3go.com";
 
 export async function createRssFile(config: SiteConfig) {
 	const feed = new Feed({
 		title: "Justin3go's Blog-🖊",
-		description: "坚持深耕技术领域的T型前端程序员, 喜欢Vuejs、Nestjs, 还会点python、nlp、web3、后端",
+		description: "A T-shaped front-end programmer who insists on deep cultivation in the field of technology, likes Vuejs, Nestjs, also knows a bit of Python, NLP, web3, and backend.",
 		id: hostname,
 		link: hostname,
-		language: "zh-CH",
+		language: "en",
 		image: "https://oss.justin3go.com/justin3goAvatar.png",
 		favicon: `https://oss.justin3go.com/justin3goAvatar.ico`,
 		copyright: "Copyright© 2021-present 渝ICP备2021006879号",
 	});
 
-	const posts = await createContentLoader("博客/**/*.md", {
+	const posts = await createContentLoader("blog/**/*.md", {
 		excerpt: true,
 		render: true,
 	}).load();
@@ -44,8 +44,8 @@ export async function createRssFile(config: SiteConfig) {
 			author: [
 				{
 					name: "Justin3go",
-					email: "justin3go@qq.com",
-					link: "https://justin3go.com",
+					email: "just@justin3go.com",
+					link: "https://en.justin3go.com",
 				},
 			],
 			date: getDate(url),

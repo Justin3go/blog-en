@@ -25,7 +25,7 @@ export default defineConfig({
     }
   },
 	head: [
-		// TODO
+		// TODO 确认子域名是否需要修改
 		["script", { async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-MB7XVBG1TQ" }],
 		[
 			"script",
@@ -84,13 +84,13 @@ export default defineConfig({
 				activeMatch: '/online/',
 				items: [
 					{
-						text: '自建项目', items: [
-							{ text: "笑友小程序", link: "https://oss.justin3go.com/blogs/xiaoyou-mp-code.png" },
-							{ text: "阿里云盘搜索", link: "https://pan.justin3go.com" },
+						text: 'Self-built Project', items: [
+							{ text: "XiaoYou", link: "https://oss.justin3go.com/blogs/xiaoyou-mp-code.png" },
+							{ text: "Alibaba Cloud Drive Search", link: "https://pan.justin3go.com" },
 						]
 					},
 					{
-						text: '开源部署', items: [
+						text: 'Open Source Deployment', items: [
 							{ text: "ChatGPT-Web", link: "https://chat.justin3go.com/" },
 							{ text: "LobeHub", link: "https://gpt.justin3go.com/" },
 							{ text: "Plane-TodoList", link: "https://plane.justin3go.com/" },
@@ -114,7 +114,7 @@ export default defineConfig({
 		footer: {
 			message: '<a href="https://github.com/Justin3go/justin3go.github.io" target="_blank">The website is open source and releases updates every weekend, if any. Stars are welcome.</a>',
 			copyright:
-				'<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">Copyright© 2021-present 渝ICP备2021006879号</a>',
+				'<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">Copyright© 2021-present Chongqing ICP Record No. 2021006879</a>',
 		},
 		search: {
 			provider: "local",

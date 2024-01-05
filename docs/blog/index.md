@@ -1,30 +1,29 @@
 ---
 
 ---
-# 博客
+# Blog
 
-## 关于笔者
+## About the Author
 
-print("hello world")，我是Justin3go，一名前端工程师，但更是一位计算机爱好者。喜欢折腾一些效率工具，尝试各种工具软件和工具网站，热爱开源、分享、探索、用代码创造价值；
+print("hello world"), I am Justin3go, a front-end engineer, but more a computer enthusiast. I like to fiddle with some efficiency tools, try various software tools and tool websites, love open source, sharing, exploring, and creating value with code;
 
-📷(snap)，我也是一名摄影爱好者。为你的自身系统保存一份快照吧，当运行出现问题的时候，这份快照可能就是你的救命稻草；
+📷(snap), I am also a photography enthusiast. Save a snapshot of your own system, when there is a problem with the operation, this snapshot may be your lifesaver;
 
-🏸( bug )，一名羽毛球爱好者，每周运行8小时，保持身体健康，以及通过挥拍清除掉生活中的BUG，保证每天的能量；
+🏸( bug ), a badminton enthusiast, running 8 hours a week, keeping the body healthy, and clearing the bugs in life through swing, ensuring daily energy;
 
-技术栈：JavaScript、Vue.js、Nest.js、Python、Solidity、Django、ElasticSearch、PostgreSQL、MySQL、Redis、Scrapy、Docker、Jest、GraphQL、VItepress、Vite、TypeScript
+Tech Stack: JavaScript, Vue.js, Nest.js, Python, Solidity, Django, ElasticSearch, PostgreSQL, MySQL, Redis, Scrapy, Docker, Jest, GraphQL, VItepress, Vite, TypeScript
 
-## 简介
+## Introduction
 
-和大家平常见到的常规博客一样，可能偶尔一个小时或半天的时间去研究并输出的一小块知识，相对来说更多带有自己的思考和理解
+Like the regular blogs you usually see, you may occasionally spend an hour or half a day to research and output a small piece of knowledge, which is more with my own thinking and understanding
 
-笔记作为输入，而这个板块就是输出，保持与外部世界的交流，才能不断进步...
+Notes as input, and this section is output, keep communication with the outside world to keep progressing...
 
-## 社交平台
+## Social Platforms
 
-> 你可以在右上角看到笔者在其他社交平台的主页
+> You can see the author's homepage on other social platforms in the upper right corner
 
-这里简单描述一下我会在相关社交平台做什么样的事：
+Here is a simple description of what I will do on the relevant social platforms:
 
-- github：文章中的一些代码，如果是项目级别的，我会托管在这个平台；并且平时自己也会做一些小项目demo；
-- twitter：随便发发，没啥重要的
-
+- github: Some of the code in the article, if it is project-level, I will host it on this platform; and I will also do some small project demos myself;
+- twitter: Just post casually, nothing important
