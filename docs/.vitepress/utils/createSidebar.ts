@@ -1,4 +1,3 @@
-// TODO
 export enum MY_TAB {
 	BLOG = "/blog/",
 	NOTE = "/notes/",
@@ -24,9 +23,9 @@ export function createSidebar() {
 				collapsed: false,
 				items: [
 					{
-						text: "1月",
+						text: "January",
 						items: [
-							{ text: "03天冷了，笔记本也需要保暖了", link: "/博客/2024/01/03天冷了，笔记本也需要保暖了" },
+							{ text: "03It's Getting Cold, and Your Laptop Needs to Keep Warm Too", link: "/blog/2024/01/03it's-getting-cold,-and-your-laptop-needs-to-keep-warm-too" },
 						],
 					},
 				],
@@ -36,13 +35,13 @@ export function createSidebar() {
 				collapsed: false,
 				items: [
 					{
-						text: "12月",
+						text: "December",
 						items: [
 							{ text: "11股票基金常用指标、方法解释", link: "/博客/2023/12/11股票基金常用指标、方法解释" },
 						],
 					},
 					{
-						text: "11月",
+						text: "November",
 						items: [
 							{ text: "29游标分页较传统分页的优势以及详细实现", link: "/博客/2023/11/29游标分页较传统分页的优势以及详细实现" },
 							{ text: "14在uniapp中使用GraphQL的一些探索", link: "/博客/2023/11/14在uniapp中使用GraphQL的一些探索" },
@@ -51,7 +50,7 @@ export function createSidebar() {
 						],
 					},
 					{
-						text: "9月",
+						text: "September",
 						items: [
 							{ text: "29自托管项目工具plane管理自己的TodoList", link: "/博客/2023/09/29自托管项目工具plane管理自己的TodoList" },
 							{ text: "29vitepress中引入Tdesign并全局增加大图预览", link: "/博客/2023/09/29vitepress中引入Tdesign并全局增加大图预览" },
@@ -59,7 +58,7 @@ export function createSidebar() {
 						],
 					},
 					{
-						text: "8月",
+						text: "August",
 						items: [
 							{ text: "31原来Vue还有这么多好用的UI库", link: "/博客/2023/08/31原来Vue还有这么多好用的UI库" },
 							{ text: "29你来你也可以做一个网盘搜索引擎", link: "/博客/2023/08/29你来你也可以做一个网盘搜索引擎" },
@@ -69,7 +68,7 @@ export function createSidebar() {
 						],
 					},
 					{
-						text: "7月",
+						text: "July",
 						items: [
 							{
 								text: "26(译)面向JavaScript开发人员的Docker简介（Node.js 和 PostgreSQL）",
@@ -82,7 +81,7 @@ export function createSidebar() {
 						],
 					},
 					{
-						text: "6月",
+						text: "June",
 						items: [
 							{ text: "18vitepress博客里增加一个RSS订阅", link: "/博客/2023/06/18vitepress博客里增加一个RSS订阅" },
 							{
@@ -92,7 +91,7 @@ export function createSidebar() {
 						],
 					},
 					{
-						text: "5月",
+						text: "May",
 						items: [
 							{ text: "11该给系统加哪一个权限控制模型呢", link: "/博客/2023/05/11该给系统加哪一个权限控制模型呢" },
 							{ text: "09PIXIJS快速一览", link: "/博客/2023/05/09PIXIJS快速一览" },
@@ -101,7 +100,7 @@ export function createSidebar() {
 						],
 					},
 					{
-						text: "4月",
+						text: "April",
 						items: [
 							{
 								text: "26试下微调GPT-3做一个心理问答机器人",
@@ -123,7 +122,7 @@ export function createSidebar() {
 						],
 					},
 					{
-						text: "3月",
+						text: "March",
 						items: [
 							{ text: "31极简地给个人博客添加订阅功能", link: "/博客/2023/03/31极简地给个人博客添加订阅功能" },
 							{ text: "29前端自给自足UI设计稿", link: "/博客/2023/03/29前端自给自足UI设计稿" },
@@ -135,7 +134,7 @@ export function createSidebar() {
 						],
 					},
 					{
-						text: "2月",
+						text: "February",
 						items: [
 							{
 								text: "23你可能忽略的10种JavaScript快乐写法",
@@ -147,7 +146,7 @@ export function createSidebar() {
 						],
 					},
 					{
-						text: "1月",
+						text: "January",
 						items: [
 							{
 								text: "28了解API相关范式(RPC、REST、GraphQL)",

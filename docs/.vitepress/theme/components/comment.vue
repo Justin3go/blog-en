@@ -28,17 +28,17 @@ const { isDark } = useData();
 
 // params generate in https://giscus.app/zh-CN
 const giscusConfig: GiscusProps = reactive({
-	repo: "justin3go/justin3go.github.io",
-	repoId: "R_kgDOJq6kjw",
+	repo: "Justin3go/blog-en",
+	repoId: "R_kgDOLBCE7A",
 	category: "Q&A",
-	categoryId: "DIC_kwDOJq6kj84CW7-N",
+	categoryId: "DIC_kwDOLBCE7M4CcNcE",
 	mapping: "title",
 	strict: "0",
 	reactionsEnabled: "1",
 	emitMetadata: "0",
 	inputPosition: "top",
 	// theme: isDark.value ? "dark" : "light", // 需要写在页面里面才会有响应式
-	lang: "zh-CN",
+	lang: "en",
 	loading: "lazy",
 });
 

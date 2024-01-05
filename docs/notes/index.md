@@ -2,31 +2,30 @@
 
 ---
 
-# 笔记
+# Notes
 
-## 关于笔者
+## About the Author
 
-print("hello world")，我是Justin3go，一名前端工程师，但更是一位计算机爱好者。喜欢折腾一些效率工具，尝试各种工具软件和工具网站，热爱开源、分享、探索、用代码创造价值；
+print("hello world"), I am Justin3go, a front-end engineer, but more a computer enthusiast. I like to fiddle with some efficiency tools, try various software tools and tool websites, love open source, sharing, exploring, and creating value with code;
 
-📷(snap)，我也是一名摄影爱好者。为你的自身系统保存一份快照吧，当运行出现问题的时候，这份快照可能就是你的救命稻草；
+📷(snap), I am also a photography enthusiast. Save a snapshot of your own system, when there is a problem with the operation, this snapshot may be your lifesaver;
 
-🏸( bug )，一名羽毛球爱好者，每周运行8小时，保持身体健康，以及通过挥拍清除掉生活中的BUG，保证每天的能量；
+🏸( bug ), a badminton enthusiast, running 8 hours a week, keeping the body healthy, and clearing the bugs in life through swing, ensuring daily energy;
 
-技术栈：JavaScript、Vue.js、Nest.js、Python、Solidity、Django、ElasticSearch、PostgreSQL、MySQL、Redis、Scrapy、Docker、Jest、GraphQL、VItepress、Vite、TypeScript
+Tech Stack: JavaScript, Vue.js, Nest.js, Python, Solidity, Django, ElasticSearch, PostgreSQL, MySQL, Redis, Scrapy, Docker, Jest, GraphQL, VItepress, Vite, TypeScript
 
-## 简介
+## Introduction
 
-这部分主要是对自己已学知识的一个归纳整理，相对于博客的tab更加的系统、丰富，欢迎大家阅读评论，正在逐步整理历史文档到该网站中，还有一些书籍笔记。
+This part is mainly a summary and arrangement of the knowledge I have learned, which is more systematic and rich compared to the blog's tab, welcome everyone to read and comment, I am gradually organizing historical documents into this website, and there are some book notes.
 
-+ 注1：有些文章是可能很久之前写的，并没有更新，我只是整理过来了，一一纠正工作量太大，所以有问题请评论吧，我会及时回复的。
-+ 注2：笔记中大多数文章都是参考别人的视频教程、文章、书籍整理而来，由于历史原因，很多笔记来自于本地上传，具体参考的那篇文章没有记录，所以笔记中的文章如果侵犯到你的版权，请及时联系或评论；之后的新的文章我会一一标明参考网络文章出处、视频教程地址、书籍名等...
++ Note 1: Some articles may have been written a long time ago and have not been updated. I just organized them. The workload to correct them one by one is too large, so if there are any problems, please comment, I will reply in time.
++ Note 2: Most of the articles in the notes are organized from other people's video tutorials, articles, books, due to historical reasons, many notes come from local uploads, the specific reference to that article is not recorded, so if the articles in the notes violate your copyright, please contact or comment in time; For the new articles in the future, I will indicate the source of the referenced online articles, video tutorial addresses, book names, etc...
 
-## 社交平台
+## Social Platforms
 
-> 你可以在右上角看到笔者在其他社交平台的主页
+> You can see the author's homepage on other social platforms in the upper right corner
 
-这里简单描述一下我会在相关社交平台做什么样的事：
+Here is a simple description of what I will do on the relevant social platforms:
 
-- github：文章中的一些代码，如果是项目级别的，我会托管在这个平台；并且平时自己也会做一些小项目demo；
-- twitter：随便发发，没啥重要的
-
+- github: Some of the code in the article, if it is project-level, I will host it on this platform; and I will also do some small project demos myself;
+- twitter: Just post casually, nothing important
