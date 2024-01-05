@@ -21,7 +21,7 @@ import { copyText } from "../../utils/copyText";
 
 const route = useRoute();
 
-const btnText = ref("复制短链接");
+const btnText = ref("Copy Short Link");
 let timer: any;
 const isShow = ref(false);
 
@@ -31,9 +31,9 @@ async function share() {
 	const key = decodeURI(path).split(".html")[0];
 	const shortUrl = long2short[key];
 	copyText(`${window.location.host}/s?u=${shortUrl}`)
-	btnText.value = "复制成功√";
+	btnText.value = "Copy Successful√";
 	timer = setTimeout(() => {
-		btnText.value = "复制短链接";
+		btnText.value = "Copy Short Link";
 	}, 2000);
 }
 

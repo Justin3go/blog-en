@@ -17,6 +17,7 @@
 	</div>
 </template>
 <script lang="ts" setup>
+// TODO edit en
 import { reactive, ref, watch, nextTick } from "vue";
 import { useData, useRoute } from "vitepress";
 import Giscus, { type GiscusProps } from '@giscus/vue'

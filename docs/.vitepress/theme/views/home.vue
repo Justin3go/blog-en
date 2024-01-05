@@ -28,8 +28,8 @@
 			<div class="max-width">
 				<about-me></about-me>
 				<div class="recently-posts-head">
-					<div class="title">最近发布</div>
-					<link-button text="博客归档" link="/博客/"></link-button>
+					<div class="title">Recently Published</div>
+					<link-button text="Blog Archive" link="/blog/"></link-button>
 				</div>
 				<div class="recently-posts">
 					<div class="post-item" v-for="post in recentlyPosts" :key="post.date">
@@ -41,7 +41,7 @@
 					</div>
 				</div>
 				<div class="comment-container">
-					<div class="comment-title">站内留言板</div>
+					<div class="comment-title">On-site Message Board</div>
 					<comment class="comment"></comment>
 				</div>
 			</div>
@@ -264,7 +264,7 @@ function handleClick() {
 	}
 
 	button::after {
-		content: "开始";
+		content: "Get Started";
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -328,7 +328,7 @@ function handleClick() {
 
 			.title {
 				font-size: 20px;
-				font-weight: 900;
+				/* font-weight: 900; */
 			}
 		}
 		.recently-posts {
@@ -349,7 +349,7 @@ function handleClick() {
 
 			.comment-title {
 				font-size: 20px;
-				font-weight: 900;
+				/* font-weight: 900; */
 				margin-bottom: 20px;
 			}
 

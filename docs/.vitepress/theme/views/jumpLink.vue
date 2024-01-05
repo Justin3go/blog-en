@@ -2,7 +2,7 @@
 	<div class="jump-link-container">
 		<div class="center">
 			<img class="loading" src="/loading.gif" alt="" />
-			正在跳转中...
+			Redirecting...
 		</div>
 	</div>
 </template>

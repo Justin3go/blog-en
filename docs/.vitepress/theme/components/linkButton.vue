@@ -42,7 +42,7 @@ button {
 	--hovered-color: #EEA948;
 	position: relative;
 	display: flex;
-	font-weight: 600;
+	/* font-weight: 600; */
 	font-size: 20px;
 	gap: 0.5rem;
 	align-items: center;

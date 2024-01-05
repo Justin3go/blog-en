@@ -1,6 +1,7 @@
+// TODO
 export enum MY_TAB {
-	BLOG = "/博客/",
-	NOTE = "/笔记/",
+	BLOG = "/blog/",
+	NOTE = "/notes/",
 }
 
 export interface IItems {
@@ -17,9 +18,9 @@ export interface ISideBar {
 
 export function createSidebar() {
 	const res: ISideBar = {
-		"/博客/": [
+		"/blog/": [
 			{
-				text: "2024年",
+				text: "2024",
 				collapsed: false,
 				items: [
 					{
@@ -31,7 +32,7 @@ export function createSidebar() {
 				],
 			},
 			{
-				text: "2023年",
+				text: "2023",
 				collapsed: false,
 				items: [
 					{
@@ -215,7 +216,7 @@ export function createSidebar() {
 				],
 			},
 		].map((item, i) => (!i ? item : { ...item, collapsed: true })),
-		"/笔记/": [
+		"/notes/": [
 			{
 				text: "threejs入门",
 				collapsed: false,
@@ -401,59 +402,3 @@ export function createSidebar() {
 	};
 	return res;
 }
-
-// TODO 可以只做2023目录之后的自动生成脚本
-/*import { readdir } from "fs/promises";
-
-interface IItem {
-	text: string;
-	link: string;
-}
-
-export async function createSidebar(path: string, prefix: string) {
-	const result = [];
-	// 只会有两级,三级目录
-	// 有目录的地方就不需要管md文件
-	try {
-		const firstLevelDir = await readdir(path);
-		for (const firstItem of firstLevelDir) {
-			// const firstItemDir = `${prefix}${firstItem}/`;
-      if(!firstItem.endsWith('.md')) {
-        const secondLevelDir = await readdir(`${path}${firstItem}/`)
-        const resultItem = {
-          text: firstItemText,
-          link: firstItemDir,
-          collapsed: false,
-          items: [] as IItem[],
-        };
-        for(const secondItem of secondLevelDir) {
-
-        }
-      }
-
-
-			const firstItemText = firstItem.substring(0, firstItem.length - 3); // 去除.md后缀
-			const resultItem = {
-				text: firstItemText,
-				link: firstItemDir,
-				collapsed: false,
-				items: [] as IItem[],
-			};
-			// 简易地判断是否有三级目录
-			if (firstItem.endsWith(".md")) {
-				if (firstItem !== "index.md") {
-					resultItem.items.push({
-						text: firstItemText,
-						link: firstItemDir + firstItem,
-					});
-				}
-			} else {
-			}
-		}
-	} catch (err) {
-		console.error(err);
-	}
-}
-
-createSidebar("./docs/博客/", "/博客/");
-*/

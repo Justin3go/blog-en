@@ -1,6 +1,6 @@
 <template>
 	<div class="about-me-container">
-		<div class="title">关于笔者</div>
+		<div class="title">About me</div>
 		<div class="content">
 			<div class="card-container">
 				<div class="e-card playing">
@@ -20,9 +20,9 @@
 						</div>
 						<br />
 						<div style="font-family: 'Lucida Handwriting'">Justin3go</div>
-						<div class="name">前端 / 羽毛球 / 摄影</div>
+						<div class="name">Front-end / Badminton / Photography</div>
 						<div class="name">
-							喜欢折腾一些效率工具，热爱开源、分享、探索、用代码创造价值。保持持续输出，数量与质量之间的平衡我更倾向于数量，因为可以记录更多...
+							Likes to fiddle with some efficiency tools, passionate about open source, sharing, exploring, and creating value with code.
 						</div>
 						<div class="social-link">
 							<div class="card">
@@ -75,14 +75,14 @@
 								</t-popup>
 								<t-popup
 									class="placement top center"
-									content="发送邮件"
+									content="Send email"
 									placement="top"
 									show-arrow
 									destroy-on-close
 								>
 									<a
 										class="social-link3"
-										href="mailto:just@justin3go.com?subject=请表明您的来意"
+										href="mailto:just@justin3go.com?subject=Please state your purpose"
 									>
 										<svg
 											t="1699149704102"
@@ -175,7 +175,7 @@ const langChartSrc = computed(() =>
 
 	.title {
 		font-size: 20px;
-		font-weight: 900;
+		/* font-weight: 900; */
 	}
 
 	.content {
