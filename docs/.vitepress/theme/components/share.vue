@@ -21,7 +21,7 @@ import { copyText } from "../../utils/copyText";
 
 const route = useRoute();
 
-const btnText = ref("Short Url");
+const btnText = ref("ShortUrl");
 let timer: any;
 const isShow = ref(false);
 
