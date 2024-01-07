@@ -40,13 +40,13 @@ export function createSidebar() {
 							{ text: "11Explanation of Common Indicators and Methods for Stock Funds", link: "/blog/2023/12/11explanation-of-common-indicators-and-methods-for-stock-funds" },
 						],
 					},
-					{
+					{ 
 						text: "November",
 						items: [
-							{ text: "29游标分页较传统分页的优势以及详细实现", link: "/blog/2023/11/29游标分页较传统分页的优势以及详细实现" },
-							{ text: "14在uniapp中使用GraphQL的一些探索", link: "/blog/2023/11/14在uniapp中使用GraphQL的一些探索" },
-							{ text: "08看看openai发布会", link: "/blog/2023/11/08看看openai发布会" },
-							{ text: "01搞个域名邮箱玩玩（如just@justin3go.com）", link: "/blog/2023/11/01搞个域名邮箱玩玩（如just@justin3go.com）" },
+							{ text: "29Advantages of Cursor Pagination over Traditional Pagination and Its Detailed Implementation", link: "/blog/2023/11/29advantages-of-cursor-pagination-over-traditional-pagination-and-its-detailed-implementation" },
+							{ text: "14Some Explorations on Using GraphQL in Uniapp", link: "/blog/2023/11/14some-explorations-on-using-graphql-in-uniapp" },
+							{ text: "08Look at the openai conference", link: "/blog/2023/11/08look-at-the-openai-conference" },
+							{ text: "01Getting a Domain Email to Play With (like `just@justin3go.com`)", link: "/blog/2023/11/01getting-a-domain-email-to-play-with-like-just@justin3go.com" },
 						],
 					},
 					{

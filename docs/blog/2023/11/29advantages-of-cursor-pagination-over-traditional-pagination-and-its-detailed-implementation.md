@@ -1,60 +1,60 @@
-# 游标分页较传统分页的优势以及详细实现
+# Advantages of Cursor Pagination over Traditional Pagination and Its Detailed Implementation
 
-## 前言
+## Preface
 
-在构建Web应用时，我们经常需要处理大量的数据。为了提高用户体验和应用性能，我们通常会采用分页技术，将数据分成多个页面，每个页面包含一部分数据。这样，用户可以按需加载和查看数据，而不是一次性加载所有数据，这对于数据量大的应用尤其重要。
+When building Web applications, we often need to deal with a large amount of data. To improve user experience and application performance, we usually adopt pagination technology, dividing data into multiple pages, each page containing a portion of the data. This way, users can load and view data as needed, instead of loading all data at once, which is especially important for applications with large amounts of data.
 
-前面使用graphql做了一个简单的后台管理系统，然后在官网上看见了graphql推荐使用游标分页的方式来实现分页，这是笔者之前从来没有使用过的一种方法，于是就瞬间激发了笔者自己的兴趣。
+Previously, I used graphql to build a simple backend management system, and then I saw on the official website that graphql recommends using cursor pagination to implement pagination. This is a method I have never used before, so it instantly sparked my interest.
 
-然后简单地做了下技术调研，了解了游标分页与传统分页之间的差异，发现基于游标分页的分页方式挺适合笔者这个项目的，于是就开始学习其中的具体实现以及开始编码了。
+Then I did a simple technical research and understood the differences between cursor pagination and traditional pagination. I found that the pagination method based on cursor pagination is quite suitable for my project, so I started learning its specific implementation and started coding.
 
 ![](https://oss.justin3go.com/blogs/Pasted%20image%2020221207225815.png)
-## 传统分页
+## Traditional Pagination
 
-### 简介
+### Introduction
 
-传统的分页方法是基于页数和每页的项目数量。例如，如果我们有100个项目，每页显示10个项目，那么我们就有10页。用户可以通过指定页数来获取特定的页面。在技术实现上，我们通常在SQL查询中使用`LIMIT`和`OFFSET`来获取特定页面的数据。
+The traditional pagination method is based on the number of pages and the number of items per page. For example, if we have 100 items and display 10 items per page, then we have 10 pages. Users can get a specific page by specifying the page number. In technical implementation, we usually use `LIMIT` and `OFFSET` in SQL queries to get the data of a specific page.
 
 ![](https://oss.justin3go.com/blogs/%E4%BC%A0%E7%BB%9F%E5%88%86%E9%A1%B5.png)
-### 优缺点
+### Pros and Cons
 
-传统分页的优点主要有两个：
+The advantages of traditional pagination mainly include two aspects:
 
-1. **实现简单**：只需要在 SQL 查询中使用 `LIMIT` 和 `OFFSET` 就可以实现。这使得传统分页在很多情况下都是一个快速、简单的解决方案。
-2. **用户友好**：用户可以直接跳转到任何一页。这对于用户来说是非常直观的，他们可以很容易地理解和使用这种分页方式。
+1. **Easy to implement**: You only need to use `LIMIT` and `OFFSET` in SQL queries to implement it. This makes traditional pagination a quick and simple solution in many cases.
+2. **User-friendly**: Users can directly jump to any page. This is very intuitive for users, and they can easily understand and use this pagination method.
 
-传统分页也有一些缺点：
+Traditional pagination also has some disadvantages:
 
-1. **性能问题**：当 `OFFSET` 很大时，数据库需要跳过许多行，这可能会导致性能问题。这是因为在获取数据之前，数据库需要先找到`OFFSET`指定的位置，这可能需要遍历大量的数据。
-2. **数据一致性问题**：如果在用户浏览页面时有新的数据插入，那么同一页的内容可能会发生变化。这可能会导致用户看到重复的数据，或者错过一些数据。
+1. **Performance issues**: When `OFFSET` is large, the database needs to skip many rows, which may cause performance issues. This is because the database needs to find the position specified by `OFFSET` before getting the data, which may require traversing a large amount of data.
+2. **Data consistency issues**: If new data is inserted while the user is browsing the page, the content of the same page may change. This may cause users to see duplicate data or miss some data.
 
-正因为这两个问题，所以才引出了游标分页技术的出现。
-## 基于游标的分页
+These two problems are precisely why cursor pagination technology emerged.
+## Cursor-based Pagination
 
-### 简介
+### Introduction
 
-注意此游标非彼游标，这里并不是指的是mysql这类中的游标，可以简单理解为一个标记，一个token之类的东西。
+Please note that this cursor is not the cursor in MySQL and the like, it can be simply understood as a mark, a token-like thing.
 
-基于游标的分页是一种新的分页方法，它不是基于页数，而是基于上一页的最后一个项目。例如，如果我们有100个项目，每页显示10个项目，那么第二页的第一个项目就是第一页的最后一个项目的下一个项目。在技术实现上，我们通常在SQL查询中使用`WHERE`和`LIMIT`，并且需要处理游标。
+Cursor-based pagination is a new pagination method. It is not based on the number of pages, but based on the last item of the previous page. For example, if we have 100 items and display 10 items per page, then the first item on the second page is the next item of the last item on the first page. In technical implementation, we usually use `WHERE` and `LIMIT` in SQL queries and need to handle the cursor.
 
 ![](https://oss.justin3go.com/blogs/%E6%B8%B8%E6%A0%87%E5%88%86%E9%A1%B5.png)
 
-对于游标分页，可以参考[这个链接](https://relay.dev/graphql/connections.htm)中指定的规范
-### 优缺点
+For cursor pagination, you can refer to the specification specified in [this link](https://relay.dev/graphql/connections.htm)
+### Pros and Cons
 
-由于就是为了解决传统分页存在的问题的，所以基于游标的分页的优点就是传统分页缺点的解决：
+Since it is to solve the problems existing in traditional pagination, the advantages of cursor-based pagination are the solutions to the disadvantages of traditional pagination:
 
-1. **性能优化**：不需要跳过任何行，只需要从上一页的最后一个项目开始。这意味着数据库只需要处理实际需要的数据，而不需要处理`OFFSET`指定的所有数据。
-2. **数据一致性**：即使有新的数据插入，也不会影响已经浏览过的页面。这是因为每一页的数据都是基于上一页的最后一个项目，而不是基于页数。
+1. **Performance optimization**: No need to skip any rows, just start from the last item on the previous page. This means that the database only needs to process the actual required data, not all data specified by `OFFSET`.
+2. **Data consistency**: Even if new data is inserted, it will not affect the pages that have been browsed. This is because each page's data is based on the last item on the previous page, not based on the number of pages.
 
-但也不是完全都是有点，游标分页也具有下面这些缺点：
+But it is not all advantages, cursor pagination also has the following disadvantages:
 
-1. **实现复杂**：需要在 SQL 查询中使用 `WHERE` 和 `LIMIT`，并且需要处理游标。这使得基于游标的分页在实现上比传统的分页更复杂。
-2. **用户体验**：用户不能直接跳转到任何一页。这可能会使用户在使用上感到不方便，特别是在需要浏览大量页面的情况下。
+1. **Complex implementation**: You need to use `WHERE` and `LIMIT` in SQL queries and need to handle the cursor. This makes the implementation of cursor-based pagination more complicated than traditional pagination.
+2. **User experience**: Users cannot directly jump to any page. This may make users feel inconvenient to use, especially when they need to browse a large number of pages.
 
-### 具体实现
+### Detailed Implementation
 
-这里以`nest.js+graphql`为例，主要实现是下方的`paginate.ts`文件：
+Here we take `nest.js+graphql` as an example, the main implementation is the following `paginate.ts` file:
 
 #### page-info.ts
 
@@ -307,8 +307,8 @@ export class PostService {
 }
 ```
 
-以上代码部分参考自[如下链接](https://gist.github.com/tumainimosha/6652deb0aea172f7f2c4b2077c72d16c)
+Parts of the above code refer to [this link](https://gist.github.com/tumainimosha/6652deb0aea172f7f2c4b2077c72d16c)
 
-## 最后
+## In the End
 
-是否选用游标分页还需看具体的业务要求，比如PC端需要分页组件，用户可以点击任意一页，那游标分页自然不能使用，但如果移动端的无限滚动，就可以使用游标分页。
+Whether to choose cursor pagination depends on the specific business requirements. For example, if the PC side needs a pagination component and users can click on any page, then cursor pagination naturally cannot be used, but if the mobile side has infinite scrolling, cursor pagination can be used.
