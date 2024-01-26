@@ -25,6 +25,7 @@ export function createSidebar() {
 					{
 						text: "January",
 						items: [
+							{ text: "26Handwriting a Search Page with Nuxt 3", link: "/blog/2024/01/26handwriting-a-search-page-with-nuxt-3" },
 							{ text: "12Write a docker+nginx https template", link: "/blog/2024/01/12write-a-docker-nginx-https-template" },
 							{ text: "03It's Getting Cold, and Your Laptop Needs to Keep Warm Too", link: "/blog/2024/01/03it's-getting-cold,-and-your-laptop-needs-to-keep-warm-too" },
 						],
